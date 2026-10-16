@@ -1,0 +1,730 @@
+/* ====================
+   全体
+==================== */
+
+body {
+    margin: 0;
+    background-color: pink;
+    min-height: 100vh;
+
+    font-family:
+        "Hiragino Kaku Gothic ProN",
+        "Yu Gothic",
+        Meiryo,
+        sans-serif;
+
+    color: #333;
+}
+
+
+/* ====================
+   猿
+==================== */
+
+.monkey {
+    position: fixed;
+    left: -100px;
+    top: 30px;
+
+    z-index: 0;
+    pointer-events: none;
+
+    animation: monkey-roll 8s linear infinite;
+}
+
+.monkey img {
+    width: 80px;
+    display: block;
+}
+
+
+@keyframes monkey-roll {
+
+    0% {
+        transform: translateX(0) rotate(0deg);
+    }
+
+    100% {
+        transform: translateX(calc(100vw + 200px)) rotate(720deg);
+    }
+
+}
+
+
+/* ====================
+   NEWS
+==================== */
+
+.news {
+    width: 90%;
+    max-width: 900px;
+
+    margin: 60px auto;
+
+    position: relative;
+    z-index: 1;
+}
+
+
+/* NEWSタイトル */
+
+.news h2 {
+    text-align: center;
+
+    font-size: 36px;
+    letter-spacing: 5px;
+
+    margin-bottom: 30px;
+}
+
+
+/* NEWSの箱 */
+
+.news-box {
+    background-color: white;
+
+    border-radius: 20px;
+
+    padding: 10px 25px;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+/* NEWS1件 */
+
+.news-item {
+    padding: 20px 10px;
+
+    border-bottom: 1px dashed #ccc;
+}
+
+
+/* 最後だけ線を消す */
+
+.news-item:last-child {
+    border-bottom: none;
+}
+
+
+/* 日付 */
+
+.news-item time {
+    display: block;
+
+    font-size: 14px;
+
+    color: #888;
+
+    margin-bottom: 6px;
+}
+
+
+/* NEWSタイトル */
+
+.news-item h3 {
+    margin: 0 0 8px;
+
+    font-size: 20px;
+}
+
+
+/* NEWSリンク */
+
+.news-item h3 a {
+    color: #333;
+
+    text-decoration: none;
+}
+
+
+.news-item h3 a:hover {
+    color: #ff69b4;
+}
+
+
+/* NEWS説明 */
+
+.news-item p {
+    margin: 0;
+
+    color: #666;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* ====================
+   イベント
+==================== */
+
+.events {
+    width: 90%;
+    max-width: 900px;
+
+    margin: 60px auto;
+
+    position: relative;
+    z-index: 1;
+}
+
+
+/* イベントタイトル */
+
+.events h2 {
+    text-align: center;
+
+    font-size: 32px;
+    letter-spacing: 3px;
+
+    margin-bottom: 30px;
+}
+
+
+/* イベントの箱 */
+
+.event-box {
+    background-color: #fff;
+
+    border-radius: 20px;
+
+    padding: 10px 25px;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+/* イベント1件 */
+
+.event-item {
+    padding: 20px 10px;
+
+    border-bottom: 1px dashed #ccc;
+}
+
+
+.event-item:last-child {
+    border-bottom: none;
+}
+
+
+/* イベント日付 */
+
+.event-item time {
+    display: block;
+
+    color: #888;
+
+    font-size: 14px;
+
+    margin-bottom: 6px;
+}
+
+
+/* イベントタイトル */
+
+.event-item h3 {
+    margin: 0 0 8px;
+
+    font-size: 20px;
+}
+
+
+.event-item h3 a {
+    color: #333;
+
+    text-decoration: none;
+}
+
+
+.event-item h3 a:hover {
+    color: #ff69b4;
+}
+
+
+/* 説明 */
+
+.event-item p {
+    margin: 0;
+
+    color: #666;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* ====================
+   MEDIA
+==================== */
+
+.media {
+    width: 90%;
+    max-width: 900px;
+
+    margin: 60px auto;
+
+    padding: 30px;
+
+    background-color: aliceblue;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.1);
+
+    position: relative;
+    z-index: 1;
+
+    box-sizing: border-box;
+}
+
+
+/* MEDIAタイトル */
+
+.media > h2 {
+    text-align: center;
+
+    font-size: 36px;
+
+    letter-spacing: 5px;
+
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+
+/* ====================
+   MEDIAカテゴリー
+==================== */
+
+.media-category {
+    background-color: white;
+
+    border-radius: 15px;
+
+    padding: 20px;
+
+    margin-bottom: 20px;
+}
+
+
+.media-category:last-child {
+    margin-bottom: 0;
+}
+
+
+/* カテゴリータイトル */
+
+.media-category h3 {
+    margin: 0 0 15px;
+
+    color: #ff69b4;
+
+    font-size: 22px;
+}
+
+
+/* 配信1件 */
+
+.media-item {
+    padding: 12px 5px;
+
+    border-bottom: 1px dashed #ccc;
+}
+
+
+.media-item:last-child {
+    border-bottom: none;
+}
+
+
+/* 日付 */
+
+.media-item time {
+    color: #888;
+
+    font-size: 13px;
+
+    margin-right: 10px;
+}
+
+
+/* リンク */
+
+.media-item a {
+    color: #333;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+
+.media-item a:hover {
+    color: #ff69b4;
+}
+
+
+/* 説明 */
+
+.media-item p {
+    margin: 5px 0 0;
+
+    color: #666;
+
+    font-size: 13px;
+}
+
+/* ========================================
+   NEWS ページネーション
+======================================== */
+
+.news-pagination {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 25px;
+}
+
+
+/* ページ番号・前へ・次へ */
+
+.news-pagination button {
+    border: none;
+
+    background-color: white;
+
+    color: #555;
+
+    padding: 8px 13px;
+
+    border-radius: 20px;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.08);
+
+    transition: 0.2s;
+}
+
+
+/* マウスを乗せたとき */
+
+.news-pagination button:hover:not(:disabled) {
+    background-color: #ff69b4;
+
+    color: white;
+}
+
+
+/* 現在のページ */
+
+.news-pagination .page-number.active {
+    background-color: #ff69b4;
+
+    color: white;
+
+    font-weight: bold;
+}
+
+
+/* 押せないボタン */
+
+.news-pagination button:disabled {
+    background-color: #eee;
+
+    color: #aaa;
+
+    cursor: default;
+
+    box-shadow: none;
+}
+
+/* ========================================
+   イベントリンクボタン
+======================================== */
+
+.event-links {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 15px;
+}
+
+
+/* ボタン */
+
+.event-links a {
+    display: inline-block;
+
+    padding: 8px 16px;
+
+    background-color: #ff69b4;
+
+    color: white;
+
+    border-radius: 20px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+
+/* マウスを乗せたとき */
+
+.event-links a:hover {
+    opacity: 0.75;
+
+    transform: translateY(-1px);
+}
+
+/* ========================================
+   生配信のお知らせ
+======================================== */
+
+.live {
+    width: 90%;
+    max-width: 900px;
+    margin: 60px auto;
+    position: relative;
+    z-index: 1;
+}
+
+.live h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.live-box {
+    background-color: white;
+    border-radius: 20px;
+    padding: 10px 25px;
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.live-item {
+    padding: 20px 10px;
+    border-bottom: 1px dashed #ddd;
+}
+
+.live-item:last-child {
+    border-bottom: none;
+}
+
+.live-item time {
+    display: block;
+    color: #999;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.live-item h3 {
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.live-item p {
+    color: #777;
+    margin: 0 0 15px;
+}
+
+.live-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.live-links a {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #ff69b4;
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.live-links a:hover {
+    opacity: 0.75;
+    transform: translateY(-1px);
+}
+
+/* ========================================
+   えりぽん情報局を完全に中央寄せ
+======================================== */
+
+.erina-header {
+    left: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.erina-header-inner {
+    width: 100%;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.erina-header h1,
+.erina-header p,
+.erina-deco {
+    text-align: center;
+}
+
+
+/* タイトル部分 */
+
+.erina-title-area {
+    text-align: center;
+
+    padding-top: 12px;
+}
+
+
+/* タイトル */
+
+.erina-title-area h1 {
+    margin: 0;
+
+    color: #ff69b4;
+
+    font-size: 28px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    text-shadow:
+        1px 1px 0 white,
+        2px 2px 5px rgba(255, 105, 180, 0.18);
+}
+
+
+/* 英語 */
+
+.erina-title-area p {
+    margin: 4px 0 0;
+
+    color: #999;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    font-weight: bold;
+}
+
+
+/* ========================================
+   サルを上へ移動
+======================================== */
+
+.monkey {
+    top: 5px;
+    z-index: 1100;
+}
+
+
+/* ========================================
+   スマホ
+======================================== */
+
+@media (max-width: 600px) {
+    .erina-header-inner {
+        min-height: 85px;
+
+        padding: 15px 65px 8px;
+    }
+
+.magic-wand {
+    position: absolute;
+
+    width: 65px;
+    height: 100px;
+
+    background-image: url("https://thumb.ac-illust.com/3a/3ac7a7f266c5f52ea4abc7f49fdbbad0_t.jpeg");
+    background-repeat: no-repeat;
+
+    background-size: 300% auto;
+
+    /* 白い背景を目立たなくする */
+    mix-blend-mode: multiply;
+}
+
+}
+/* ========================================
+   サル
+   ヘッダーの上を左から右へコロコロ
+======================================== */
+
+.monkey {
+    position: fixed;
+
+    top: 0;
+    left: -100px;
+
+    z-index: 1101;
+
+    animation: monkey-roll 8s linear infinite;
+}
+
+
+/* 左から右へ移動しながら回転 */
+
+@keyframes monkey-roll {
+
+    0% {
+        left: -100px;
+        transform: rotate(0deg);
+    }
+
+    100% {
+        left: 100vw;
+        transform: rotate(720deg);
+    }
+
+}
+
+
+/* ========================================
+   スマホ
+======================================== */
+
+@media (max-width: 600px) {
+
+    .monkey {
+        top: 0;
+    }
+
+}
+
